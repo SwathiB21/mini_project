@@ -1,0 +1,8 @@
+Flask==2.1.1
+Werkzeug==2.0.3
+tensorflow==2.9.1
+numpy==1.22.4
+opencv-python-headless==4.5.5.64
+Pillow==9.0.1
+protobuf>=3.9.2,<3.20
+keras>=2.9.0rc0,<2.10.0

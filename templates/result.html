@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('static/image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Ensure body position relative for overlay */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: -1; /* Ensure the overlay is behind other content */
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            position: relative; /* Ensure the container is positioned relative to body */
+            z-index: 1; /* Ensure the container is above the overlay */
+            color: #333; /* Set text color to dark */
+        }
+        h1 {
+            margin-top: 0; /* Add margin to separate from container edges */
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #930505; /* Adjust result text color */
+        }
+        .result span {
+            font-weight: bold;
+            color: #4CAF50;
+        }a
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Detection Result</h1>
+        
+        <div class="result">
+            <p>Prediction: <span>{{ prediction_result }}</span></p>
+        </div>
+        
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
